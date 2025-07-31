@@ -7,6 +7,13 @@
      <link rel="stylesheet" type="text/css" href="/css/bulma.css">
     <title>Reproductor MP3</title>
 </head>
+<?php
+     $dir = 'music';
+     $archivos = scandir($dir);
+     foreach ($archivos as $archivo) {
+       echo $archivo . "<br>";
+     }
+     ?>
 <body>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -73,5 +80,6 @@
 
    
     <script src="/js/script.js"></script>
+   
 </body>
 </html>
