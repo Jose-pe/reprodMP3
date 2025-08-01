@@ -7,13 +7,7 @@
      <link rel="stylesheet" type="text/css" href="/css/bulma.css">
     <title>Reproductor MP3</title>
 </head>
-<?php
-     $dir = 'music';
-     $archivos = scandir($dir);
-     foreach ($archivos as $archivo) {
-       echo $archivo . "<br>";
-     }
-     ?>
+
 <body>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -70,12 +64,63 @@
             Your browser does not support the audio element.
         </audio>
        
-    </div>
+            </div>
         </div>
 
     </div>
 
 
+</section>
+<section class="container">
+  <div class="columns is-align-content-center">
+    <div class="column is-12 is-justify-content-center">
+      <h2 class="text-center"> ULTIMOS ALBUM'S</h2>
+    </div>
+  </div>
+  <div class="columns is-align-content-center">
+         <div class="column is-12  text-center  is-justify-content-center">
+        <?php
+     $dir = 'music';
+     $archivos = scandir($dir);
+     foreach ($archivos as $archivo) {
+       echo "<a><span class='tag is-link is-normal'>". $archivo ."</span></a><br>";
+     }
+     ?>
+      </div>
+  </div>
+
+</section>
+<section class="container">
+    <div class="columns is-align-content-center">
+      <div class="column is-4  text-center  is-justify-content-center">
+        <?php
+     $dir = 'music';
+     $archivos = scandir($dir);
+     foreach ($archivos as $archivo) {
+       echo $archivo . "<br>";
+     }
+     ?>
+      </div>
+        <div class="column is-4  text-center">
+        <?php
+     $dir = 'music';
+     $archivos = scandir($dir);
+     foreach ($archivos as $archivo) {
+       echo $archivo . "<br>";
+     }
+     ?>
+      </div>
+       <div class="column is-4  text-center ">
+        <?php
+     $dir = 'music';
+     $archivos = scandir($dir);
+     foreach ($archivos as $archivo) {
+       echo $archivo . "<br>";
+     }
+     ?>
+      </div>
+    </div>
+    
 </section>
 
    
